@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Bundle JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .main-content {
+            min-height: calc(100vh - 250px); /* Adjust if footer gets taller */
+            padding: 20px;
+        }
+        .footer {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <strong>Adrian Ang</strong>
+        </a>
+
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+            aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#">Resume</a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5">
+  <div class="container p-4">
+    <div class="row text-center text-md-start">
+
+      <!-- About -->
+      <div class="col-12 col-md-6 mb-4">
+        <h5 class="text-uppercase">Adrian Ang</h5>
+        <p>
+          Python developer & aspiring Data Engineer. Passionate about tech, science, and creating meaningful solutions.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-12 col-md-3 mb-4">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Projects</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-12 col-md-3 mb-4">
+        <h5 class="text-uppercase">Contact</h5>
+        <ul class="list-unstyled">
+          <li>Email: <a href="mailto:adrianang878@gmail.com" class="text-white text-decoration-none">adrianang878@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Adrian-Ang012" class="text-white text-decoration-none">Adrian-Ang012</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/adrian-ang-bb2176311/" class="text-white text-decoration-none">Adrian Ang</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center p-3 bg-secondary">
+    © 2025 Adrian Ang. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>
