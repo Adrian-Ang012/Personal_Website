@@ -1,0 +1,275 @@
+{% extends 'My_WebsiteApp/1.base.html' %} 
+{% load static %}
+
+{% block content %}
+<!-- Hero/About Section -->
+<section id="about" class="py-5 text-white" style="background-color: #000;">
+    <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+            
+            <!-- Text Content -->
+            <div class="col-lg-6 text-center text-lg-start">
+                <div class="mb-3">
+                    <span class="badge bg-success rounded-pill">● Available for internship</span>
+                </div>
+                <h1 class="fw-bold mb-3" style="font-size: 2.5rem;">
+                    Future <span class="text-primary">Data Engineer</span><br>
+                    Driven by Purpose,<br>
+                    Powered by Code
+                </h1>
+
+                <p class="lead mb-4 px-2 px-lg-0">
+                    I’m Adrian Ang: Aspiring data engineer with a passion for Python, clean code, and turning data into solutions.
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+                    <a href="#" class="btn btn-primary">Download CV</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="{% static 'Lebron.jpg' %}" alt="Adrian Ang"
+                     class="img-fluid rounded-4 shadow" style="max-width: 300px; width: 100%;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About Card Section -->
+<section class="py-5" style="background-color: rgb(0, 0, 0);">
+    <div class="container">
+        <div class="card text-white p-4 shadow-lg" style="background-color: #121212; border-radius: 20px;">
+
+        <!-- About Text -->
+        <p class="mb-4 fs-5">
+            I’m a 3rd-year Management Information Systems student at The Ateneo de Manila University, specializing in Data Science and Analytics. I bridge business and tech through coding, automation, and data-driven tools that turn raw information into real solutions.
+        </p>
+
+        <!-- Stats -->
+        <div class="d-flex flex-wrap gap-5 justify-content-start align-items-start mt-4">
+            <div>
+            <h3 class="fw-bold">10+</h3>
+                <small class="text">Projects Built</small>
+            </div>
+            <div>
+                <h3 class="fw-bold">3rd Year</h3>
+            <small class="text">MIS - Data Science</small>
+            </div>
+
+            <div>
+            <h3 class="fw-bold">2027</h3>
+                <small class="text">Expected Graduation</small>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills / Tools Section -->
+<section id="tools" class="py-5 text-white" style="background-color: rgb(0, 0, 0);">
+    <div class="container text-center">
+        <h2 class="mb-4 fw-bold">Tools & Technologies</h2>
+        <p class="mb-5">These are the tools I regularly use in building, analyzing, and designing digital solutions.</p>
+
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-code-slash fs-3 mb-2"></i>
+            Python
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-diagram-3-fill fs-3 mb-2"></i>
+            Django
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-filetype-html fs-3 mb-2"></i>
+            HTML & CSS
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-bootstrap-fill fs-3 mb-2"></i>
+            Bootstrap
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-bar-chart-line-fill fs-3 mb-2"></i>
+            Tableau
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-git fs-3 mb-2"></i>
+            Git & GitHub
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-database-fill fs-3 mb-2"></i>
+            MySQL
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-dark p-3 rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-graph-up fs-3 mb-2"></i>
+            Pandas
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- What I Do (Grid Cards) Section -->
+<section class="py-5 text-white" style="background-color: rgb(0, 0, 0);">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">What I Do</h2>
+    <p class="mb-5">A snapshot of how I turn ideas into working digital solutions.</p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
+          <div class="card-body text-center">
+            <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+            <h5 class="card-title fw-bold">Data Visualization</h5>
+            <p class="card-text">Transforming raw data into clear, compelling visual insights using tools like matplotlib, Tableau, and Power BI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
+          <div class="card-body text-center">
+            <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+            <h5 class="card-title fw-bold">Web Development</h5>
+            <p class="card-text">Building responsive, interactive websites using Django, Bootstrap, and a touch of JavaScript.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6">
+        <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
+          <div class="card-body text-center">
+            <i class="fas fa-database fa-3x mb-3 text-primary"></i>
+            <h5 class="card-title fw-bold">Data Automation</h5>
+            <p class="card-text">Automating workflows to save time and reduce errors with Python scripts and Pandas pipelines.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
+          <div class="card-body text-center">
+            <i class="fas fa-brain fa-3x mb-3 text-primary"></i>
+            <h5 class="card-title fw-bold">Problem Solving</h5>
+            <p class="card-text">Approaching complex problems with structured thinking and building tools that offer clear solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--projects-->
+<section id="projects" class="py-5 bg-black text-white">
+  <div class="container">
+    <h2 class="text-center mb-5">Projects I've Built</h2>
+
+    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Project 1 -->
+        <div class="carousel-item active">
+          <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
+            <div class="row align-items-center">
+              <!-- IMAGE -->
+              <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="{% static 'Lebron.jpg' %}" alt="NeoPayroll" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;">
+              </div>
+
+              <!-- TEXT -->
+              <div class="col-md-6">
+                <h3>NeoPayroll: Employee Payroll System</h3>
+                <p>A Django-based system to manage employee profiles, compute salaries with allowances, and streamline payroll operations. Built for a class project, then enhanced with Bootstrap UI and real-world logic.</p>
+                <p><strong>Tech Stack:</strong> Django, HTML/CSS, Bootstrap, SQLite</p>
+                <div class="d-flex gap-3 mt-3">
+                  <a href="#" class="btn btn-primary">View Code</a>
+                  <a href="#" class="btn btn-outline-light">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more .carousel-item blocks here -->
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="py-5 bg-black text-white mt-5">
+<div class="container">
+    <div class="row align-items-center">
+    
+    <!-- Left Text -->
+    <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="fw-bold mb-3">Contact</h2>
+        <p>Fill out the form and we’ll get in touch to set up an introductory meeting.</p>
+        <p class="text-muted">Please allow up to 48 hours for a returned call or email.</p>
+    </div>
+
+    <!-- Right Form Card -->
+    <div class="col-md-6">
+        <div class="card bg-dark text-white shadow-lg border-0 rounded-4 p-4">
+        <form>
+            <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control bg-black text-white border-secondary" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control bg-black text-white border-secondary" id="email" placeholder="your@email.com">
+            </div>
+            <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control bg-black text-white border-secondary" id="message" rows="5" placeholder="Your message..."></textarea>
+            </div>
+            <div class="text-end">
+            <button type="submit" class="btn btn-primary px-4">Send</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    </div>
+</div>
+</section>
+
+
+
+{% endblock %}
