@@ -28,7 +28,7 @@
 
             <!-- Image -->
             <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                <img src="{% static 'Lebron.jpg' %}" alt="Adrian Ang"
+                <img src="{% static 'ian_pfp.png' %}" alt="Adrian Ang"
                      class="img-fluid rounded-4 shadow" style="max-width: 300px; width: 100%;">
             </div>
 
@@ -48,10 +48,8 @@
 
         <!-- Stats -->
         <div class="d-flex flex-wrap gap-5 justify-content-start align-items-start mt-4">
-            <div>
-            <h3 class="fw-bold">10+</h3>
-                <small class="text">Projects Built</small>
-            </div>
+            
+  
             <div>
                 <h3 class="fw-bold">3rd Year</h3>
             <small class="text">MIS - Data Science</small>
@@ -62,7 +60,7 @@
                 <small class="text">Expected Graduation</small>
             </div>
 
-            </div>
+        
         </div>
     </div>
 </section>
@@ -183,50 +181,26 @@
 </section>
 
 <!--projects-->
+<!-- projects -->
 <section id="projects" class="py-5 bg-black text-white">
-  <div class="container">
-    <h2 class="text-center mb-5">Projects I've Built</h2>
+  <div class="container text-center">
 
-    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+    <h2 class="mb-4">Projects I've Built</h2>
 
-        <!-- Project 1 -->
-        <div class="carousel-item active">
-          <div class="card h-100 bg-dark text-white border-0 shadow-lg p-3">
-            <div class="row align-items-center">
-              <!-- IMAGE -->
-              <div class="col-md-6 text-center mb-4 mb-md-0">
-                <img src="{% static 'Lebron.jpg' %}" alt="NeoPayroll" class="img-fluid rounded shadow" style="max-height: 350px; width: auto;">
-              </div>
-
-              <!-- TEXT -->
-              <div class="col-md-6">
-                <h3>NeoPayroll: Employee Payroll System</h3>
-                <p>A Django-based system to manage employee profiles, compute salaries with allowances, and streamline payroll operations. Built for a class project, then enhanced with Bootstrap UI and real-world logic.</p>
-                <p><strong>Tech Stack:</strong> Django, HTML/CSS, Bootstrap, SQLite</p>
-                <div class="d-flex gap-3 mt-3">
-                  <a href="#" class="btn btn-primary">View Code</a>
-                  <a href="#" class="btn btn-outline-light">Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add more .carousel-item blocks here -->
-
+    <div class="card bg-dark text-white border-0 shadow-lg p-5 rounded-4">
+      <!-- Icon -->
+      <div class="mb-4">
+        <i class="bi bi-cone-striped" style="font-size: 4rem; color: #ffc107;"></i>
       </div>
 
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <!-- Text -->
+      <h4 class="fw-bold mb-2">Section under construction</h4>
+      <p class="text-muted mb-0">
+        I'm currently refining this section and preparing live demos.
+        Check back soon.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -240,29 +214,41 @@
     <div class="col-md-6 mb-4 mb-md-0">
         <h2 class="fw-bold mb-3">Contact</h2>
         <p>Fill out the form and we’ll get in touch to set up an introductory meeting.</p>
-        <p class="text-muted">Please allow up to 48 hours for a returned call or email.</p>
+        <p class="text">Please allow up to 48 hours for a returned call or email.</p>
     </div>
 
     <!-- Right Form Card -->
     <div class="col-md-6">
         <div class="card bg-dark text-white shadow-lg border-0 rounded-4 p-4">
-        <form>
-            <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control bg-black text-white border-secondary" id="name" placeholder="Your Name">
-            </div>
-            <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control bg-black text-white border-secondary" id="email" placeholder="your@email.com">
-            </div>
-            <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control bg-black text-white border-secondary" id="message" rows="5" placeholder="Your message..."></textarea>
-            </div>
-            <div class="text-end">
+        <form method="post" action="{% url 'contact' %}">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name"
+              class="form-control bg-black text-white border-secondary"
+              placeholder="Your Name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" name="email"
+              class="form-control bg-black text-white border-secondary"
+              placeholder="your@email.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message"
+              class="form-control bg-black text-white border-secondary"
+              rows="5" required></textarea>
+          </div>
+
+          <div class="text-end">
             <button type="submit" class="btn btn-primary px-4">Send</button>
-            </div>
+          </div>
         </form>
+
         </div>
     </div>
 
